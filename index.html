@@ -374,7 +374,104 @@
         width:100%;
       }
     }
+/* MOBILE RESPONSIVE FIX */
 
+@media(max-width:768px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  section{
+    padding:70px 20px;
+  }
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    padding-top:120px;
+    gap:40px;
+  }
+
+  .hero-text h1{
+    font-size:40px;
+    line-height:1.2;
+  }
+
+  .hero-text h3{
+    font-size:18px;
+  }
+
+  .hero-text p{
+    font-size:15px;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .hero-card{
+    width:100%;
+    padding:25px;
+  }
+
+  .skills-grid{
+    grid-template-columns:1fr;
+  }
+
+  .experience-grid{
+    grid-template-columns:1fr;
+  }
+
+  .experience-card{
+    padding:25px;
+    width:100%;
+  }
+
+  .experience-card h3{
+    font-size:28px;
+  }
+
+  .experience-card h4{
+    font-size:16px;
+  }
+
+  .exp-item{
+    width:100%;
+    padding:18px;
+    font-size:14px;
+  }
+
+  .about-container{
+    grid-template-columns:1fr;
+  }
+
+  .section-title{
+    font-size:34px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .social-icons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+  }
+
+  .contact-container p{
+    font-size:15px;
+    word-break:break-word;
+  }
+
+}
   </style>
 </head>
 

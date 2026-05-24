@@ -1,238 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gautam Rajak | IT Support Engineer</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family: Arial, sans-serif;
+      font-family:'Poppins',sans-serif;
     }
 
     body{
-      background:#0b1120;
+      background:#050816;
       color:white;
+      overflow-x:hidden;
+    }
+
+    html{
       scroll-behavior:smooth;
     }
 
+    /* SCROLL BAR */
+
+    ::-webkit-scrollbar{
+      width:10px;
+    }
+
+    ::-webkit-scrollbar-track{
+      background:#0f172a;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:#2563eb;
+      border-radius:20px;
+    }
+
+    /* NAVBAR */
+
     header{
-      background:#111827;
+      position:fixed;
+      width:100%;
+      top:0;
+      left:0;
+      z-index:1000;
       padding:20px 8%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      border-bottom:1px solid #1e293b;
+      background:rgba(10,15,35,0.75);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
     }
 
-    header h2{
+    .logo{
+      font-size:28px;
+      font-weight:700;
       color:#3b82f6;
     }
 
     nav a{
-      color:white;
       text-decoration:none;
-      margin-left:25px;
+      color:white;
+      margin-left:30px;
       transition:0.3s;
+      font-size:15px;
     }
 
     nav a:hover{
       color:#3b82f6;
     }
 
+    /* HERO */
+
     .hero{
       min-height:100vh;
       display:flex;
-      align-items:center;
       justify-content:space-between;
-      padding:80px 8%;
+      align-items:center;
+      padding:140px 8% 80px;
+      gap:60px;
       flex-wrap:wrap;
     }
 
     .hero-text{
-      max-width:600px;
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-text h3{
+      color:#60a5fa;
+      font-size:22px;
+      margin-bottom:15px;
     }
 
     .hero-text h1{
-      font-size:55px;
-      margin-bottom:15px;
+      font-size:65px;
+      line-height:1.1;
+      margin-bottom:20px;
     }
 
     .hero-text h1 span{
       color:#3b82f6;
     }
 
-    .hero-text h3{
-      color:#94a3b8;
-      margin-bottom:20px;
+    .hero-text p{
+      color:#cbd5e1;
+      line-height:1.9;
+      margin-bottom:35px;
+      max-width:650px;
     }
 
-    .hero-text p{
-      line-height:1.7;
-      color:#cbd5e1;
-      margin-bottom:30px;
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
     }
 
     .btn{
-      padding:14px 28px;
-      background:#3b82f6;
-      color:white;
+      padding:15px 28px;
+      border-radius:12px;
       text-decoration:none;
-      border-radius:8px;
-      margin-right:15px;
+      font-weight:500;
       transition:0.3s;
-      display:inline-block;
+      border:none;
     }
 
-    .btn:hover{
+    .btn-primary{
       background:#2563eb;
-      transform:translateY(-3px);
+      color:white;
+      box-shadow:0 0 20px rgba(37,99,235,0.5);
     }
 
-    .hero-img img{
-      width:350px;
-      border-radius:20px;
-      border:4px solid #3b82f6;
-      box-shadow:0 0 30px rgba(59,130,246,0.4);
+    .btn-primary:hover{
+      transform:translateY(-5px);
+      background:#1d4ed8;
     }
 
-    section{
-      padding:80px 8%;
-    }
-
-    .section-title{
-      font-size:38px;
-      margin-bottom:50px;
-      text-align:center;
+    .btn-secondary{
+      border:1px solid #3b82f6;
       color:#3b82f6;
     }
 
-    .about{
-      background:#111827;
-      border-radius:20px;
-      padding:40px;
+    .btn-secondary:hover{
+      background:#2563eb;
+      color:white;
+      transform:translateY(-5px);
     }
 
-    .about p{
-      color:#cbd5e1;
-      line-height:1.8;
-      font-size:17px;
+    /* HERO CARD */
+
+    .hero-card{
+      width:360px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(20px);
+      border-radius:25px;
+      padding:35px;
+      box-shadow:0 0 40px rgba(0,0,0,0.3);
+      animation:float 4s ease-in-out infinite;
     }
 
-    .skills-container{
+    @keyframes float{
+      0%{transform:translateY(0px);}
+      50%{transform:translateY(-12px);}
+      100%{transform:translateY(0px);}
+    }
+
+    .hero-card h2{
+      margin-bottom:25px;
+      color:#60a5fa;
+    }
+
+    .info-box{
+      margin-bottom:18px;
+      padding:15px;
+      background:#0f172a;
+      border-radius:14px;
+    }
+
+    .info-box i{
+      color:#3b82f6;
+      margin-right:10px;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:60px;
+      color:#3b82f6;
+    }
+
+    /* ABOUT */
+
+    .about-container{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .about-box{
+      background:rgba(255,255,255,0.04);
+      padding:35px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .about-box p{
+      color:#cbd5e1;
+      line-height:1.9;
+    }
+
+    /* SKILLS */
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:25px;
     }
 
     .skill-card{
-      background:#111827;
-      padding:25px;
-      border-radius:15px;
-      transition:0.3s;
-      border:1px solid #1e293b;
+      background:rgba(255,255,255,0.05);
+      padding:30px;
+      border-radius:20px;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.08);
     }
 
     .skill-card:hover{
       transform:translateY(-10px);
       border-color:#3b82f6;
+      box-shadow:0 0 30px rgba(37,99,235,0.25);
     }
 
     .skill-card i{
       font-size:40px;
       color:#3b82f6;
-      margin-bottom:15px;
+      margin-bottom:20px;
     }
 
     .skill-card h3{
-      margin-bottom:10px;
+      margin-bottom:12px;
     }
 
-    .experience{
-      background:#111827;
-      border-radius:20px;
-      padding:40px;
-    }
-
-    .exp-box{
-      border-left:3px solid #3b82f6;
-      padding-left:20px;
-      margin-bottom:30px;
-    }
-
-    .exp-box h3{
-      color:#3b82f6;
-      margin-bottom:10px;
-    }
-
-    .exp-box p{
+    .skill-card p{
       color:#cbd5e1;
-      line-height:1.7;
+      line-height:1.8;
+      font-size:15px;
     }
 
-    .contact{
+    /* PROGRESS */
+
+    .progress-area{
+      margin-top:20px;
+    }
+
+    .progress-box{
+      margin-bottom:25px;
+    }
+
+    .progress-box span{
+      display:block;
+      margin-bottom:10px;
+    }
+
+    .progress{
+      width:100%;
+      height:12px;
+      background:#1e293b;
+      border-radius:30px;
+      overflow:hidden;
+    }
+
+    .progress div{
+      height:100%;
+      background:linear-gradient(to right,#2563eb,#60a5fa);
+      border-radius:30px;
+    }
+
+    /* EXPERIENCE */
+
+    .timeline{
+      position:relative;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .timeline::before{
+      content:'';
+      position:absolute;
+      left:50%;
+      width:4px;
+      height:100%;
+      background:#2563eb;
+      transform:translateX(-50%);
+    }
+
+    .timeline-item{
+      width:50%;
+      padding:25px;
+      position:relative;
+    }
+
+    .timeline-item:nth-child(odd){
+      left:0;
+    }
+
+    .timeline-item:nth-child(even){
+      left:50%;
+    }
+
+    .timeline-content{
+      background:#111827;
+      padding:25px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .timeline-content h3{
+      color:#60a5fa;
+      margin-bottom:12px;
+    }
+
+    .timeline-content p{
+      color:#cbd5e1;
+      line-height:1.8;
+    }
+
+    /* CONTACT */
+
+    .contact-container{
       text-align:center;
     }
 
-    .contact p{
-      margin:15px 0;
-      color:#cbd5e1;
+    .contact-container p{
+      margin:18px 0;
       font-size:18px;
+      color:#cbd5e1;
+    }
+
+    .social-icons{
+      margin-top:30px;
     }
 
     .social-icons a{
+      width:55px;
+      height:55px;
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      background:#111827;
+      border-radius:50%;
       color:white;
-      margin:0 15px;
-      font-size:28px;
+      font-size:22px;
+      margin:0 10px;
       transition:0.3s;
+      text-decoration:none;
     }
 
     .social-icons a:hover{
-      color:#3b82f6;
+      background:#2563eb;
+      transform:translateY(-6px);
     }
 
     footer{
       text-align:center;
-      padding:20px;
-      background:#111827;
+      padding:25px;
+      background:#0f172a;
       color:#94a3b8;
-      margin-top:50px;
+      border-top:1px solid rgba(255,255,255,0.08);
     }
 
+    /* RESPONSIVE */
+
     @media(max-width:900px){
+
       .hero{
-        flex-direction:column-reverse;
+        flex-direction:column;
         text-align:center;
       }
 
-      .hero-img img{
-        width:280px;
-        margin-bottom:40px;
+      .hero-text h1{
+        font-size:48px;
       }
 
-      .hero-text h1{
-        font-size:42px;
+      .timeline::before{
+        left:10px;
+      }
+
+      .timeline-item{
+        width:100%;
+        padding-left:40px;
+        padding-right:0;
+      }
+
+      .timeline-item:nth-child(even){
+        left:0;
       }
 
       nav{
         display:none;
       }
+
+      .hero-card{
+        width:100%;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <h2>Gautam Rajak</h2>
+
+  <div class="logo">Gautam Rajak</div>
 
   <nav>
     <a href="#about">About</a>
@@ -240,141 +437,250 @@
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
+
+<!-- HERO -->
 
 <section class="hero">
 
   <div class="hero-text">
-    <h1>Hi, I'm <span>Gautam Rajak</span></h1>
 
-    <h3>Desktop Support Engineer | Azure AD | Office 365 | IT Helpdesk</h3>
+    <h3>IT Helpdesk • Cloud Support • Azure Administrator</h3>
+
+    <h1>
+      Building Reliable
+      <span>IT Solutions</span>
+    </h1>
 
     <p>
-      Professional IT Support Engineer with experience in Desktop Support,
-      Azure AD, Active Directory, Microsoft 365, Exchange Online,
-      Intune, AVD, and L1/L2 IT Support. Passionate about solving
-      technical issues and delivering enterprise-level IT solutions.
+      Professional Desktop Support Engineer with expertise in
+      Azure AD, Microsoft 365, Active Directory, Exchange Online,
+      Microsoft Intune, VPN Support, Remote Troubleshooting,
+      and Enterprise IT Operations.
     </p>
 
-   <a href="resume.pdf" download class="btn">Download Resume</a>
+    <div class="buttons">
 
-    <a href="https://www.linkedin.com/in/gautam-rajak-86801318b/"
-       target="_blank"
-       class="btn">
-       LinkedIn
-    </a>
+      <a href="./resume.pdf" target="_blank"
+      class="btn btn-primary">
+      Download Resume
+      </a>
+
+      <a href="https://www.linkedin.com/in/gautam-rajak-86801318b/"
+      target="_blank"
+      class="btn btn-secondary">
+      LinkedIn
+      </a>
+
+    </div>
+
   </div>
 
-  <!--
-<div class="hero-img">
-    <img src="your-photo.jpg" alt="Gautam Rajak">
-</div>
--->
+  <!-- HERO CARD -->
+
+  <div class="hero-card">
+
+    <h2>Quick Info</h2>
+
+    <div class="info-box">
+      <i class="fa-solid fa-briefcase"></i>
+      2+ Years Experience
+    </div>
+
+    <div class="info-box">
+      <i class="fa-solid fa-cloud"></i>
+      Azure AD & Microsoft 365
+    </div>
+
+    <div class="info-box">
+      <i class="fa-solid fa-headset"></i>
+      L1/L2 IT Support
+    </div>
+
+    <div class="info-box">
+      <i class="fa-solid fa-location-dot"></i>
+      Jamshedpur, India
+    </div>
+
+  </div>
 
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
 
   <h2 class="section-title">About Me</h2>
 
-  <div class="about">
-    <p>
-      I am an IT Help Desk & Desktop Support Engineer with over 2+
-      years of experience in supporting users, troubleshooting systems,
-      and managing Microsoft technologies including Azure AD,
-      Active Directory, Office 365, Exchange Online, and Intune.
-      I specialize in remote desktop support, ticket handling,
-      system administration, and enterprise IT operations.
-    </p>
+  <div class="about-container">
+
+    <div class="about-box">
+
+      <p>
+        I am an IT Help Desk & Desktop Support Engineer with hands-on
+        experience supporting enterprise users globally.
+        My expertise includes Active Directory, Azure AD,
+        Office 365, Exchange Online, Intune, Outlook troubleshooting,
+        VPN support, remote desktop support, and user management.
+      </p>
+
+    </div>
+
+    <div class="about-box">
+
+      <p>
+        Currently working at Supreme Components International,
+        I manage IT incidents, support global users,
+        resolve technical issues within SLA,
+        and help maintain secure IT infrastructure.
+      </p>
+
+    </div>
+
   </div>
 
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills">
 
   <h2 class="section-title">Technical Skills</h2>
 
-  <div class="skills-container">
+  <div class="skills-grid">
 
     <div class="skill-card">
       <i class="fa-solid fa-desktop"></i>
       <h3>Desktop Support</h3>
-      <p>L1/L2 support, troubleshooting, Windows OS, printers & applications.</p>
+      <p>Windows troubleshooting, printers, applications & hardware support.</p>
     </div>
 
     <div class="skill-card">
       <i class="fa-solid fa-cloud"></i>
-      <h3>Cloud Support</h3>
-      <p>Azure AD, Microsoft 365, Exchange Online & Intune support.</p>
+      <h3>Cloud Technologies</h3>
+      <p>Azure AD, Microsoft 365, Intune & Exchange Online administration.</p>
     </div>
 
     <div class="skill-card">
       <i class="fa-solid fa-network-wired"></i>
       <h3>Networking</h3>
-      <p>VPN troubleshooting, RDP, remote support & connectivity issues.</p>
+      <p>VPN troubleshooting, RDP, Quick Assist & remote connectivity support.</p>
     </div>
 
     <div class="skill-card">
       <i class="fa-solid fa-shield-halved"></i>
-      <h3>Security</h3>
-      <p>MFA setup, Microsoft Authenticator & user access management.</p>
+      <h3>Security & MFA</h3>
+      <p>Microsoft Authenticator, MFA setup & access management.</p>
+    </div>
+
+  </div>
+
+  <!-- PROGRESS BARS -->
+
+  <div class="progress-area">
+
+    <div class="progress-box">
+      <span>Azure AD</span>
+      <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="progress-box">
+      <span>Office 365</span>
+      <div class="progress"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="progress-box">
+      <span>Active Directory</span>
+      <div class="progress"><div style="width:88%"></div></div>
+    </div>
+
+    <div class="progress-box">
+      <span>Microsoft Intune</span>
+      <div class="progress"><div style="width:75%"></div></div>
     </div>
 
   </div>
 
 </section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
 
   <h2 class="section-title">Experience</h2>
 
-  <div class="experience">
+  <div class="timeline">
 
-    <div class="exp-box">
-      <h3>Help Desk Specialist — Supreme Components International</h3>
+    <div class="timeline-item">
 
-      <p>
-        July 2023 - Present <br><br>
+      <div class="timeline-content">
 
-        • Managed Active Directory & Azure AD accounts <br>
-        • Provided L1/L2 IT Support globally <br>
-        • Resolved Office 365 & Outlook issues <br>
-        • Supported Exchange Online & MFA <br>
-        • Handled 30+ IT tickets daily within SLA <br>
-        • Provided remote support via Quick Assist & RDP
-      </p>
+        <h3>Help Desk Specialist</h3>
+
+        <p>
+          Supreme Components International <br><br>
+
+          • Managed Azure AD & Active Directory users <br>
+          • Resolved Office 365 & Outlook issues <br>
+          • Supported MFA & Exchange Online <br>
+          • Handled 30+ IT tickets daily <br>
+          • Provided global remote desktop support
+        </p>
+
+      </div>
+
     </div>
 
   </div>
 
 </section>
 
-<section id="contact" class="contact">
+<!-- CONTACT -->
 
-  <h2 class="section-title">Contact Me</h2>
+<section id="contact">
 
-  <p><i class="fa-solid fa-envelope"></i> gautamrajak012@gmail.com</p>
+  <h2 class="section-title">Contact</h2>
 
-  <p><i class="fa-solid fa-phone"></i> +91 8340447040</p>
+  <div class="contact-container">
 
-  <p><i class="fa-solid fa-location-dot"></i> Jamshedpur, Jharkhand, India</p>
+    <p>
+      <i class="fa-solid fa-envelope"></i>
+      gautamrajak012@gmail.com
+    </p>
 
-  <div class="social-icons">
+    <p>
+      <i class="fa-solid fa-phone"></i>
+      +91 8340447040
+    </p>
 
-    <a href="https://www.linkedin.com/in/gautam-rajak-86801318b/" target="_blank">
+    <p>
+      <i class="fa-solid fa-location-dot"></i>
+      Jamshedpur, Jharkhand, India
+    </p>
+
+    <div class="social-icons">
+
+      <a href="https://github.com/gautamkr15"
+      target="_blank">
+      <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/gautam-rajak-86801318b/"
+      target="_blank">
       <i class="fa-brands fa-linkedin"></i>
-    </a>
+      </a>
 
-  <a href="https://github.com/gautamkr15" target="_blank">
-    <i class="fa-brands fa-github"></i>
-</a>
+    </div>
 
   </div>
 
 </section>
 
 <footer>
-  © 2026 Gautam Rajak | Corporate IT Support Portfolio
+
+  © 2026 Gautam Rajak • Corporate IT Support Portfolio
+
 </footer>
 
 </body>

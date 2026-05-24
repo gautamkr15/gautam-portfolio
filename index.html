@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gautam Rajak | IT Support Engineer</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#0b1120;
+      color:white;
+      scroll-behavior:smooth;
+    }
+
+    header{
+      background:#111827;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      border-bottom:1px solid #1e293b;
+    }
+
+    header h2{
+      color:#3b82f6;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#3b82f6;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:80px 8%;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      max-width:600px;
+    }
+
+    .hero-text h1{
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .hero-text h1 span{
+      color:#3b82f6;
+    }
+
+    .hero-text h3{
+      color:#94a3b8;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      line-height:1.7;
+      color:#cbd5e1;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:14px 28px;
+      background:#3b82f6;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      margin-right:15px;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      background:#2563eb;
+      transform:translateY(-3px);
+    }
+
+    .hero-img img{
+      width:350px;
+      border-radius:20px;
+      border:4px solid #3b82f6;
+      box-shadow:0 0 30px rgba(59,130,246,0.4);
+    }
+
+    section{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      font-size:38px;
+      margin-bottom:50px;
+      text-align:center;
+      color:#3b82f6;
+    }
+
+    .about{
+      background:#111827;
+      border-radius:20px;
+      padding:40px;
+    }
+
+    .about p{
+      color:#cbd5e1;
+      line-height:1.8;
+      font-size:17px;
+    }
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .skill-card{
+      background:#111827;
+      padding:25px;
+      border-radius:15px;
+      transition:0.3s;
+      border:1px solid #1e293b;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-10px);
+      border-color:#3b82f6;
+    }
+
+    .skill-card i{
+      font-size:40px;
+      color:#3b82f6;
+      margin-bottom:15px;
+    }
+
+    .skill-card h3{
+      margin-bottom:10px;
+    }
+
+    .experience{
+      background:#111827;
+      border-radius:20px;
+      padding:40px;
+    }
+
+    .exp-box{
+      border-left:3px solid #3b82f6;
+      padding-left:20px;
+      margin-bottom:30px;
+    }
+
+    .exp-box h3{
+      color:#3b82f6;
+      margin-bottom:10px;
+    }
+
+    .exp-box p{
+      color:#cbd5e1;
+      line-height:1.7;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      color:#cbd5e1;
+      font-size:18px;
+    }
+
+    .social-icons a{
+      color:white;
+      margin:0 15px;
+      font-size:28px;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      color:#3b82f6;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#111827;
+      color:#94a3b8;
+      margin-top:50px;
+    }
+
+    @media(max-width:900px){
+      .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .hero-img img{
+        width:280px;
+        margin-bottom:40px;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>Gautam Rajak</h2>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Gautam Rajak</span></h1>
+
+    <h3>Desktop Support Engineer | Azure AD | Office 365 | IT Helpdesk</h3>
+
+    <p>
+      Professional IT Support Engineer with experience in Desktop Support,
+      Azure AD, Active Directory, Microsoft 365, Exchange Online,
+      Intune, AVD, and L1/L2 IT Support. Passionate about solving
+      technical issues and delivering enterprise-level IT solutions.
+    </p>
+
+    <a href="#" class="btn">Download Resume</a>
+
+    <a href="https://www.linkedin.com/in/gautam-rajak-86801318b/"
+       target="_blank"
+       class="btn">
+       LinkedIn
+    </a>
+  </div>
+
+  <div class="hero-img">
+    <img src="your-photo.jpg" alt="Gautam Rajak">
+  </div>
+
+</section>
+
+<section id="about">
+
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about">
+    <p>
+      I am an IT Help Desk & Desktop Support Engineer with over 2+
+      years of experience in supporting users, troubleshooting systems,
+      and managing Microsoft technologies including Azure AD,
+      Active Directory, Office 365, Exchange Online, and Intune.
+      I specialize in remote desktop support, ticket handling,
+      system administration, and enterprise IT operations.
+    </p>
+  </div>
+
+</section>
+
+<section id="skills">
+
+  <h2 class="section-title">Technical Skills</h2>
+
+  <div class="skills-container">
+
+    <div class="skill-card">
+      <i class="fa-solid fa-desktop"></i>
+      <h3>Desktop Support</h3>
+      <p>L1/L2 support, troubleshooting, Windows OS, printers & applications.</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-cloud"></i>
+      <h3>Cloud Support</h3>
+      <p>Azure AD, Microsoft 365, Exchange Online & Intune support.</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-network-wired"></i>
+      <h3>Networking</h3>
+      <p>VPN troubleshooting, RDP, remote support & connectivity issues.</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Security</h3>
+      <p>MFA setup, Microsoft Authenticator & user access management.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="experience">
+
+  <h2 class="section-title">Experience</h2>
+
+  <div class="experience">
+
+    <div class="exp-box">
+      <h3>Help Desk Specialist — Supreme Components International</h3>
+
+      <p>
+        July 2023 - Present <br><br>
+
+        • Managed Active Directory & Azure AD accounts <br>
+        • Provided L1/L2 IT Support globally <br>
+        • Resolved Office 365 & Outlook issues <br>
+        • Supported Exchange Online & MFA <br>
+        • Handled 30+ IT tickets daily within SLA <br>
+        • Provided remote support via Quick Assist & RDP
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+  <h2 class="section-title">Contact Me</h2>
+
+  <p><i class="fa-solid fa-envelope"></i> gautamrajak012@gmail.com</p>
+
+  <p><i class="fa-solid fa-phone"></i> +91 8340447040</p>
+
+  <p><i class="fa-solid fa-location-dot"></i> Jamshedpur, Jharkhand, India</p>
+
+  <div class="social-icons">
+
+    <a href="https://www.linkedin.com/in/gautam-rajak-86801318b/" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="#">
+      <i class="fa-brands fa-github"></i>
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Gautam Rajak | Corporate IT Support Portfolio
+</footer>
+
+</body>
+</html>

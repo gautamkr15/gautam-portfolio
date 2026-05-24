@@ -295,97 +295,50 @@
 
     /* EXPERIENCE */
 
-    .timeline{
-      position:relative;
-      max-width:900px;
-      margin:auto;
-    }
+    .experience-card{
+  max-width:950px;
+  margin:auto;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  padding:40px;
+}
 
-    .timeline::before{
-      content:'';
-      position:absolute;
-      left:50%;
-      width:4px;
-      height:100%;
-      background:#2563eb;
-      transform:translateX(-50%);
-    }
+.experience-card h3{
+  font-size:32px;
+  color:#60a5fa;
+  margin-bottom:10px;
+}
 
-    .timeline-item{
-      width:50%;
-      padding:25px;
-      position:relative;
-    }
+.experience-card h4{
+  color:#cbd5e1;
+  margin-bottom:35px;
+  font-weight:400;
+}
 
-    .timeline-item:nth-child(odd){
-      left:0;
-    }
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
 
-    .timeline-item:nth-child(even){
-      left:50%;
-    }
+.exp-item{
+  background:#0f172a;
+  padding:20px;
+  border-radius:16px;
+  line-height:1.7;
+  transition:0.3s;
+}
 
-    .timeline-content{
-      background:#111827;
-      padding:25px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.08);
-    }
+.exp-item:hover{
+  transform:translateY(-5px);
+  border:1px solid #3b82f6;
+}
 
-    .timeline-content h3{
-      color:#60a5fa;
-      margin-bottom:12px;
-    }
-
-    .timeline-content p{
-      color:#cbd5e1;
-      line-height:1.8;
-    }
-
-    /* CONTACT */
-
-    .contact-container{
-      text-align:center;
-    }
-
-    .contact-container p{
-      margin:18px 0;
-      font-size:18px;
-      color:#cbd5e1;
-    }
-
-    .social-icons{
-      margin-top:30px;
-    }
-
-    .social-icons a{
-      width:55px;
-      height:55px;
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
-      background:#111827;
-      border-radius:50%;
-      color:white;
-      font-size:22px;
-      margin:0 10px;
-      transition:0.3s;
-      text-decoration:none;
-    }
-
-    .social-icons a:hover{
-      background:#2563eb;
-      transform:translateY(-6px);
-    }
-
-    footer{
-      text-align:center;
-      padding:25px;
-      background:#0f172a;
-      color:#94a3b8;
-      border-top:1px solid rgba(255,255,255,0.08);
-    }
-
+.exp-item i{
+  color:#3b82f6;
+  margin-right:10px;
+}
     /* RESPONSIVE */
 
     @media(max-width:900px){
